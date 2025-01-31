@@ -12,8 +12,8 @@ import { toast } from "react-hot-toast";
 import "./TempDataUser.css";
 import icon_rotation3 from "../assets/icon_rotation3.svg";
 import girl_rocket from "../assets/girl_rocket.svg";
-import other3 from "../assets/other3.svg";
-import other8 from "../assets/other8.svg";
+// import other3 from "../assets/other3.svg";
+// import other8 from "../assets/other8.svg";
 
 const TempDataUser = () => {
   // consume
@@ -243,10 +243,10 @@ const TempDataUser = () => {
           </span>
         </div>
         <div className="icon_shadow">
-          <img src={other3} alt="img" className="icon_box" />
+{/*           <img src={other3}  className="icon_box" alt="img" /> */}
         </div>
         <div className="icon_shadow1">
-          <img src={other8} alt="img" className="icon_box" />
+{/*           <img src={other8}  className="icon_box" alt="img" /> */}
         </div>
         <div className="circle_inner">
           <div className="send_otp">
