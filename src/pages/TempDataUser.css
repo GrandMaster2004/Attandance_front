@@ -1,0 +1,170 @@
+body {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+  /* overflow: hidden; */
+}
+.main {
+  display: flex;
+  max-width: 80%;
+  /* margin: auto; */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.main_left {
+  padding-top: 6rem;
+  max-width: 50%;
+  color: #fff;
+  flex-wrap: wrap;
+}
+.coders_title {
+  font-size: 5.688rem;
+}
+
+.right_text,
+.left_text {
+  color: #fff;
+}
+
+.main_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+.main_right img {
+  z-index: 2;
+}
+
+.circle_outer {
+  border: 2px solid #323946;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 50%;
+  -webkit-animation: spin 7s forwards infinite;
+  -moz-animation: spin 7s forwards infinite;
+  animation: spin 7s forwards infinite;
+  margin-top: 7rem;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circle_inner {
+  /* z-index: 43; */
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    262deg,
+    rgba(216, 151, 194, 1) 0%,
+    rgba(116, 184, 195, 1) 100%
+  );
+  position: absolute;
+  -webkit-text-stroke: linear-gradient(
+    262deg,
+    rgba(216, 151, 194, 1) 0%,
+    rgba(116, 184, 195, 1) 100%
+  );
+  margin-top: 7rem;
+  z-index: 5s;
+}
+.send_otp {
+  text-align: center;
+}
+
+.club_text {
+  background: linear-gradient(
+    151deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(254, 188, 137, 1) 50%,
+    rgba(149, 140, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spot_left {
+  display: flex;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50% 50% 50% 50%;
+  background: rgb(246, 153, 140);
+  left: -150px;
+  position: absolute;
+  opacity: 25%;
+  filter: blur(100px);
+  top: -4rem;
+  z-index: -1;
+}
+
+.right_left {
+  display: flex;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50% 50% 50% 50%;
+  background: rgb(60, 200, 114);
+  right: 0;
+  position: absolute;
+  opacity: 25%;
+  filter: blur(100px);
+  bottom: 0;
+}
+
+.icon_shadow {
+  z-index: 2;
+  position: absolute;
+  top: 0rem;
+  right: 35%;
+}
+.icon_shadow1 {
+  z-index: 2;
+  position: absolute;
+  top: 15rem;
+  right: 32%;
+}
+.rocket {
+  top: 19rem;
+  left: 18rem;
+}
+.rocket1 {
+  position: absolute;
+  rotate: 190deg;
+  top: 20rem;
+  right: 1rem;
+}
+
+.icon_box {
+  width: 150px;
+  height: 150px;
+  animation: anime 2s infinite ease-in alternate-reverse;
+  -webkit-animation: anime 2s infinite ease-in alternate-reverse;
+}
+@keyframes anime {
+  100% {
+    transform: translateY(15px);
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    /* box-shadow: 0 40px 10px -18px rgba(179, 114, 114),0 40px 16px -12px rgba(rgb(7, 5, 5), green, blue, alpha); */
+  }
+}
+
+/* left code start */
