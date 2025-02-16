@@ -30,7 +30,7 @@ const TempDataUser = () => {
   const { data, isSuccess } = useGetLoggedUserQuery(access_token);
   const [sendemail, { isLoading }] = useSendEmailMutation();
   const [isEmail] = useIsEmailMutation();
-  console.log(data);
+  // console.log(data);
 
   const [formData, setFormData] = useState({
     otp: "",
@@ -91,6 +91,10 @@ const TempDataUser = () => {
 
     const resp = await sendemail({ actualData, access_token });
     if (resp.error) {
+      setotp(true);
+      randomNum();
+      clearInterval(interval);
+      console.log("Timer ended!");
       setServerError(resp.error.data.errors);
       toast.error("Some Error Occure during OTP send");
     } else {
@@ -100,7 +104,6 @@ const TempDataUser = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    // Extract data from the form
     const data = new FormData(e.currentTarget);
     const actualData = {
       dob: data.get("dob"),
@@ -110,6 +113,7 @@ const TempDataUser = () => {
       is_email: true,
     };
     const code1 = Number(data.get("otp"));
+    console.log(actualData);
 
     if (code1 === code) {
       const res = await isEmail({ actualData, access_token });
@@ -209,12 +213,12 @@ const TempDataUser = () => {
               {server_error.year ? server_error.year : ""}
             </span>
           </label>
-          <button
+          <input
             className="w-full bg-green-500 rounded-[0.5rem]  p-[12px] cursor-pointer"
-            onClick={submitHandler}
-          >
-            Validate
-          </button>
+            value="Validate"
+            type="submit"
+          />
+
           {otp1 ? (
             <button
               className="w-full bg-blue-500 rounded-[0.5rem]  p-[12px] cursor-pointer"
