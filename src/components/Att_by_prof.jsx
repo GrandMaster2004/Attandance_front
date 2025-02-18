@@ -144,7 +144,7 @@ const Att_by_prof = (props) => {
           dispatch(saveObjects(allData));
           setCheck(true);
         }
-      }, 1000);
+      }, 60000);
     }
   };
 
